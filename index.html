@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEVA Times - O Jornal do CEVA</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style-a.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link id="favicon" rel="icon" href="./assets/icon-a.ico">
+
+</head>
+
+<body>
+    <div class="modeLight" id="mode-button-div">
+        <img src="./assets/assets-f.png" alt="Claro" id="mode-button-icon">
+    </div>
+    <header class="cab">
+        <section class="cab-sect-a">
+            <img src="./assets/assets-b.png" alt="Logotipo" class="cab-sect-a--img">
+            <h1 class="cab-sect-a--h1">The Ceva Times</h1>
+            <img src="./assets/assets-b.png" alt="Logotipo" class="cab-sect-a--img">
+        </section>
+        <div class="cab-div-a"></div>
+        <section class="cab-sect-b">
+            <p class="cab-sect-b--p">O jornal do CEVA</p>
+            <img src="./assets/assets-a.png" alt="|" class="cab-sect-b--img">
+            <p class="cab-sect-b--p">Grêmio Estudantil</p>
+            <img src="./assets/assets-a.png" alt="|" class="cab-sect-b--img">
+            <p class="cab-sect-b--p">Alto Paraíso - Pr</p>
+        </section>
+        <section class="cab-sect-c">
+            <div class="cab-div-b"></div>
+            <div class="cab-div-c"></div>
+        </section>
+    </header>
+    <main class="principal">
+        <section class="prin-sect-a">
+            <section class="prin-sect-a-sect">
+                <h2 class="prin-sect-a-sect--h2">Bem-vindo (a) ao</h2>
+                <h1 class="prin-sect-a-sect--h1">The Ceva Times</h1>
+                <h3 class="prin-sect-a-sect--h3">O jornal do Colégio Estadual Vila Alta!</h3>
+            </section>
+            <div class="prin-sect-a--div"></div>
+            <section class="prin-sect-a-sect-b">
+                <p class="prin-sect-a-sect--p">Aqui você encontra notícias, eventos, projetos e conquistas do Colégio
+                    Estadual Vila Alta, com informação feita pela comunidade escolar e para a comunidade escolar,
+                    valorizando a participação e a voz de todos.</p>
+            </section>
+        </section>
+        <section class="prin-sect-b">
+            <h3 class="prin-sect-b--h3">Veja as últimas notícias:</h3>
+            <section class="prin-sect-b-sect" id="canva">
+            </section>
+        </section>
+        <section class="prin-sect-c">
+            <h3 class="prin-sect-b--h3">Sua Reportagem aqui:</h3>
+            <section class="prin-sect-c-sect">
+                <h2 class="prin-sect-c-sect--h2">Tem uma notícia, projeto, evento ou conquista para compartilhar?</h2>
+                <h3 class="prin-sect-c-sect--h3">Entre em contato com a equipe do The Ceva Times e
+                    publique sua reportagem em nosso site.</h3>
+                <h4 class="prin-sect-c-sect--h4">Dê voz às suas ideias e ajude a fortalecer a comunicação do Colégio
+                    Estadual Vila Alta.</h4>
+                <a href="mailto:ceva.times.editor@gmail.com" class="prin-sect-c-sect--a">
+                    <img src="./assets/assets-c.png" alt="E-mail" class="prin-sect-c-sect--a-img">
+                    <div class="prin-sect-c-sect--a-div">
+                        Envie um e-mail para: <br>ceva.times.editor@gmail.com
+                    </div>
+                </a>
+            </section>
+        </section>
+        <section class="prin-sect-d">
+            <h3 class="prin-sect-b--h3">Veja todas as notícias:</h3>
+            <a href="pages/allnotices" class="prin-sect-d-sect--a">
+                <div class="prin-sect-d-sect--a-div">
+                    Clique para ver todas as nossas notícias publicadas.
+                </div>
+            </a>
+        </section>
+    </main>
+    <footer class="foot">
+        <p class="foot--p">© 2026 The Ceva Times - O Jornal do CEVA. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function setFavicon(theme) {
+            const favicon = document.getElementById('favicon');
+
+            if (theme === 'dark') {
+                favicon.href = './assets/icon-b.ico';
+            } else {
+                favicon.href = './assets/icon-a.ico';
+            }
+        }
+
+        // Detecta tema do sistema
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+        // Aplica ao carregar
+        setFavicon(prefersDark.matches ? 'dark' : 'light');
+
+        // Detecta mudança de tema em tempo real
+        prefersDark.addEventListener('change', (e) => {
+            setFavicon(e.matches ? 'dark' : 'light');
+        });
+
+    </script>
+    <script src="script/script-c.js"></script>
+    <script src="script/script-e.js"></script>
+    <script>
+        busca();
+    </script>
+</body>
+
+</html>

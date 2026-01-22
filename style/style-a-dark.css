@@ -1,0 +1,13 @@
+    body {
+        background-image: url('../assets/background-b.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(100%);
+    }
+
+    .prin-sect-b--div-img {
+        filter: invert(100%);
+        border-bottom: 0.9vh solid #FFFFFF;
+
+    }
